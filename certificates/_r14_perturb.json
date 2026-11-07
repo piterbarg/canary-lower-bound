@@ -1,0 +1,161 @@
+{
+ "rows": [
+  {
+   "c": "11/10",
+   "r": "13/10",
+   "d3": "1/1000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-1/2",
+    "-99/128"
+   ]
+  },
+  {
+   "c": "11/10",
+   "r": "13/10",
+   "d3": "1/100000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-1/2",
+    "-99/128"
+   ]
+  },
+  {
+   "c": "6/5",
+   "r": "23/20",
+   "d3": "1/1000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-1/2",
+    "-46/75"
+   ]
+  },
+  {
+   "c": "6/5",
+   "r": "23/20",
+   "d3": "1/100000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-1/2",
+    "-46/75"
+   ]
+  },
+  {
+   "c": "2",
+   "r": "7/5",
+   "d3": "1/1000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-3/2",
+    "-11/5"
+   ]
+  },
+  {
+   "c": "2",
+   "r": "7/5",
+   "d3": "1/100000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-3/2",
+    "-11/5"
+   ]
+  },
+  {
+   "c": "9/4",
+   "r": "3/2",
+   "d3": "1/1000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-175/116",
+    "-567/232"
+   ]
+  },
+  {
+   "c": "9/4",
+   "r": "3/2",
+   "d3": "1/100000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-175/116",
+    "-567/232"
+   ]
+  },
+  {
+   "c": "5/2",
+   "r": "8/5",
+   "d3": "1/1000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-3/2",
+    "-177/68"
+   ]
+  },
+  {
+   "c": "5/2",
+   "r": "8/5",
+   "d3": "1/100000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-3/2",
+    "-177/68"
+   ]
+  },
+  {
+   "c": "3/2",
+   "r": "5/4",
+   "d3": "1/1000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-3/2",
+    "-63/32"
+   ]
+  },
+  {
+   "c": "3/2",
+   "r": "5/4",
+   "d3": "1/100000",
+   "wedge": true,
+   "chain_serves": true,
+   "pert_nonneg": true,
+   "pert_serves": false,
+   "witness": [
+    "-3/2",
+    "-63/32"
+   ]
+  }
+ ],
+ "fails": []
+}

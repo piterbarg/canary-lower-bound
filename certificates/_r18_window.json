@@ -1,0 +1,326 @@
+{
+ "cell_2": {
+  "n": 2,
+  "rstar": "13/12",
+  "certs": [
+   {
+    "H": [
+     0
+    ],
+    "yb": "1",
+    "box": [
+     [
+      "1/8",
+      "3/8"
+     ],
+     [
+      "1/2",
+      "3/4"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0
+    ],
+    "yb": "2",
+    "box": [
+     [
+      "1/4",
+      "3/4"
+     ],
+     [
+      "9/8",
+      "11/8"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0
+    ],
+    "yb": "3",
+    "box": [
+     [
+      "1/4",
+      "3/4"
+     ],
+     [
+      "17/8",
+      "19/8"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0,
+     1
+    ],
+    "yb": "2",
+    "box": [
+     [
+      "9/8",
+      "11/8"
+     ],
+     [
+      "13/8",
+      "15/8"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0,
+     1
+    ],
+    "yb": "3",
+    "box": [
+     [
+      "5/4",
+      "7/4"
+     ],
+     [
+      "17/8",
+      "19/8"
+     ]
+    ],
+    "extends_all_r": true
+   }
+  ],
+  "all_certs_extend_all_r": true,
+  "unique_fixed_pins": true,
+  "parametric_pin_used": false,
+  "parametric_pin_ok": null,
+  "rank": 14,
+  "unique": true,
+  "unique_witness": null,
+  "family_X_S": [
+   "1",
+   "13/12"
+  ],
+  "family_witness": {
+   "ok_open_interval": true,
+   "margins": {
+    "1": "1/96",
+    "73/72": "5/576",
+    "37/36": "1/144",
+    "149/144": "7/1152",
+    "25/24": "1/192",
+    "251/240": "3/640",
+    "21/20": "1/240",
+    "16/15": "1/480",
+    "13/12": "0"
+   },
+   "margin_at_r1": "1/96",
+   "margin_at_rstar": "0"
+  },
+  "window_theorem": true,
+  "covers_r1": true,
+  "r1_via_decide": false
+ },
+ "cell_3": {
+  "n": 3,
+  "rstar": "17/16",
+  "certs": [
+   {
+    "H": [
+     0
+    ],
+    "yb": "1",
+    "box": [
+     [
+      "1/8",
+      "3/8"
+     ],
+     [
+      "1/2",
+      "3/4"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0
+    ],
+    "yb": "2",
+    "box": [
+     [
+      "1/4",
+      "3/4"
+     ],
+     [
+      "9/8",
+      "11/8"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0
+    ],
+    "yb": "3",
+    "box": [
+     [
+      "1/4",
+      "3/4"
+     ],
+     [
+      "17/8",
+      "19/8"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0
+    ],
+    "yb": "4",
+    "box": [
+     [
+      "1/4",
+      "3/4"
+     ],
+     [
+      "25/8",
+      "27/8"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0,
+     1
+    ],
+    "yb": "2",
+    "box": [
+     [
+      "9/8",
+      "11/8"
+     ],
+     [
+      "13/8",
+      "15/8"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0,
+     1
+    ],
+    "yb": "3",
+    "box": [
+     [
+      "5/4",
+      "7/4"
+     ],
+     [
+      "17/8",
+      "19/8"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0,
+     1
+    ],
+    "yb": "4",
+    "box": [
+     [
+      "5/4",
+      "7/4"
+     ],
+     [
+      "25/8",
+      "27/8"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0,
+     1,
+     2
+    ],
+    "yb": "3",
+    "box": [
+     [
+      "17/8",
+      "19/8"
+     ],
+     [
+      "21/8",
+      "23/8"
+     ]
+    ],
+    "extends_all_r": true
+   },
+   {
+    "H": [
+     0,
+     1,
+     2
+    ],
+    "yb": "4",
+    "box": [
+     [
+      "9/4",
+      "11/4"
+     ],
+     [
+      "25/8",
+      "27/8"
+     ]
+    ],
+    "extends_all_r": true
+   }
+  ],
+  "all_certs_extend_all_r": true,
+  "unique_fixed_pins": true,
+  "parametric_pin_used": false,
+  "parametric_pin_ok": null,
+  "rank": 21,
+  "unique": true,
+  "unique_witness": null,
+  "family_X_S": [
+   "3",
+   "49/16"
+  ],
+  "family_witness": {
+   "ok_open_interval": true,
+   "margins": {
+    "1": "1/64",
+    "289/288": "11/768",
+    "145/144": "5/384",
+    "73/72": "1/96",
+    "49/48": "1/128",
+    "33/32": "3/512",
+    "25/24": "1/256",
+    "101/96": "1/512",
+    "17/16": "0"
+   },
+   "margin_at_r1": "1/64",
+   "margin_at_rstar": "0"
+  },
+  "window_theorem": true,
+  "covers_r1": true,
+  "r1_via_decide": false
+ },
+ "parametric_pin_standalone": {
+  "grid_points": 59,
+  "bad": [],
+  "ok": true
+ }
+}

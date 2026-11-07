@@ -83,6 +83,16 @@ d = UniversalityDecider(q1, q2, F(5, 4)).decide()
 print(d['verdict'])            # universal
 ```
 
+## Certificates
+
+The companion paper proves its "only if" and uniqueness clauses (the
+four-atom dilation window, the binomial-flow column `n = 2..8`, the cells
+`(3,3)` and `(4,4)`) by finite exact computations whose certificates it
+says are "recorded in the supplementary code". They are: `certificates/`
+holds the eleven JSON certificate banks (exact rationals as strings) and a
+[README](certificates/README.md) that maps each file to the theorem or lemma
+it backs and describes its records.
+
 ## Provenance
 
 The code was written by Anthropic's Claude models under the author's

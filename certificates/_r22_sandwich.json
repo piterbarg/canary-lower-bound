@@ -1,0 +1,39 @@
+{
+ "prereg": "_r22_prereg.md",
+ "cell": 3,
+ "rstar": "5/4",
+ "k1_range": [
+  "5/4",
+  "3/2"
+ ],
+ "L_segments": [
+  [
+   "1",
+   "5/4",
+   0
+  ]
+ ],
+ "segments": [
+  {
+   "ra": "1",
+   "rb": "5/4",
+   "L_index": 0,
+   "strong_duality_at_mid": true,
+   "dual_feasible_rfree": true,
+   "dual_value_affine": [
+    "45/64",
+    "-3/16"
+   ],
+   "target_affine": [
+    "45/64",
+    "-3/16"
+   ],
+   "dual_identity": true,
+   "primal_coverage": true,
+   "extra_extractions": [],
+   "seg_ok": true
+  }
+ ],
+ "sandwich_certified": true,
+ "window33": true
+}
