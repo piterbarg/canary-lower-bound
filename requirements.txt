@@ -1,0 +1,5 @@
+# The checks need only the Python standard library (fractions).
+# The figures need:
+numpy>=1.24
+matplotlib>=3.7
+# Tested with Python 3.12.9, numpy 2.2.6, matplotlib 3.10.6.
