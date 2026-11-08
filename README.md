@@ -62,7 +62,8 @@ this never occurs on the instances of the papers).
 |---|---|---|
 | `shadow_and_chord.py` | `fig_shadow_hull_01.png`, `fig_chord_01.png` | Figures 2 and 7 |
 | `windows_and_column.py` | `fig_windows_01.png`, `fig_column_01.png` | Figures 8 and 9 |
-| `dual_step4.py` | `fig_step4_01.png` | Figure 10 |
+| `dens_smoothed.py` | `fig_dens_smoothed_01.png` | Figure 10 |
+| `dual_step4.py` | `fig_step4_01.png` | Figure 11 |
 
 Every plotted number is an exact rational; matplotlib only renders.
 
