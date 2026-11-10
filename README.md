@@ -8,7 +8,8 @@ Exact computations behind
 and its companion paper
 
 > V. V. Piterbarg, *Universal Minimal Measures for Canary Options: Explicit
-> Families and Exact Thresholds*, SSRN working paper, 2026 (link to follow).
+> Families and Exact Thresholds*, SSRN working paper
+> [7688081](https://ssrn.com/abstract=7688081), November 2026.
 
 A Canary is a Bermudan option with two exercise dates. The first paper derives
 the sharp model-independent lower bound on its price given the two marginal
