@@ -42,7 +42,7 @@ input and refuses to return an LP value whose optimality it has not certified.
 | `canary/decider.py` | **is there a universal minimal measure** for `(q1, q2, r)`? Portfolio LP, exact certificate `V(Q;.) == L(.)` on all of R², cutting-plane iteration, minimal conflicting set with its exact gap | Def. 8.1, Sect. 14 |
 | `canary/threshold.py` | the greedy fibers and the marginals-only **threshold r\*** (n+1 convex hulls, no LP), the explicit families (dilations, binomial flow, convolutions) and the instances of the papers | Lemma 9.1, Thm. 9.4, Prop. 9.7 |
 
-## What is checked (`checks/numcheck.py`, 51 checks)
+## What is checked (`checks/numcheck.py`, 56 checks)
 
 | Block | Statement checked | Route |
 |---|---|---|
@@ -52,6 +52,7 @@ input and refuses to return an LP value whose optimality it has not certified.
 | W | **Theorem 11.1** as an if-and-only-if: the three-atom family is universal at `c = 4r-3` and not at `c = 4r-3+1/50`; the four-atom family likewise at `c = 3r-2`, and universal on all of `(1,3)` for `r >= 5/3` | decider |
 | C | **Theorem 11.2**: the binomial flow is universal at `r = r*(n)` and not at `r = 1` or `r*(n) - 1/1000`, `n = 2..5`; the `(3,3)` and `(4,4)` cells | decider |
 | N | **Proposition 10.1**: instances that are universal at `r = 1`, not universal at several `r` in `(1, r*)`, and universal again at `r*`; the exceptional convolution instance universal at `r = 1` with `r* = 16/15` | decider |
+| T | the remark after that proposition: for `q1 = (1/7) δ_0 + (6/7) δ_{1/6}` and `q2` uniform on `{-3,-2,-1,0,1,2,4}`, `r* = 7`; universal at `r = 2` and at `r = 4` by two different couplings, neither of them the chain coupling, and neither universal at the other ratio; not universal at `r = 1, 3/2, 3, 11/2` | decider, `canary.threshold` |
 
 A verdict is one of `universal` (a certified universal coupling is returned),
 `not universal (conflicting pair)` (the pair and its exact portfolio gap),

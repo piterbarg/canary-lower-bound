@@ -17,6 +17,9 @@ Blocks:
   W  the dilation windows of Theorem 11.1 as if-and-only-if statements
   C  the binomial-flow thresholds of Theorem 11.2 and the (3,3), (4,4) cells
   N  Proposition 10.1: the sufficient condition is not necessary
+  T  a pair of marginals with two admissible slope ratios below the
+     threshold, each with its own universal coupling (the remark after
+     that proposition)
 Run time: one to two minutes (exact LPs).
 """
 import os
@@ -115,6 +118,23 @@ def run(verbose=True):
     qe1, kern = T.EXCEPTIONAL_Q1, T.EXCEPTIONAL_KERNEL
     check('N exceptional convolution: universal at r=1 with r*=16/15',
           verdict(qe1, T.convolve(qe1, kern), 1) == UNIVERSAL)
+
+    # ---- T: two admissible slope ratios below the threshold --------------
+    # q1 = (1/7) delta_0 + (6/7) delta_{1/6}, q2 uniform on {-3,-2,-1,0,1,2,4}
+    t1 = T.measure([(F(0), F(1, 7)), (F(1, 6), F(6, 7))])
+    t2 = T.measure([(F(t), F(1, 7)) for t in (-3, -2, -1, 0, 1, 2, 4)])
+    check('T threshold r* = 7', T.rstar(t1, t2) == 7)
+    dec = {r: UniversalityDecider(t1, t2, r) for r in (F(1), F(3, 2), F(2), F(3), F(4), F(11, 2), F(7))}
+    res = {r: d.decide() for r, d in dec.items()}
+    check('T universal at r = 2, 4 and 7', all(res[r]['verdict'] == UNIVERSAL for r in (F(2), F(4), F(7))))
+    check('T not universal at r = 1, 3/2, 3, 11/2',
+          all(res[r]['verdict'] == NOT_UNIVERSAL_PAIR for r in (F(1), F(3, 2), F(3), F(11, 2))))
+    Q = {r: [[F(v) for v in row] for row in res[r]['Q']] for r in (F(2), F(4), F(7))}
+    chain0 = [F(1, 7) if y == 0 else F(0) for y in dec[F(7)].ys]   # the chain coupling sends 0 to 0
+    check('T chain coupling at r = 7; two other, different couplings at r = 2 and r = 4',
+          Q[F(7)][0] == chain0 and Q[F(2)][0] != chain0 and Q[F(4)][0] != chain0 and Q[F(2)] != Q[F(4)])
+    check('T the coupling universal at r = 2 is not universal at r = 4, nor conversely',
+          not dec[F(4)].certify(Q[F(2)])[0] and not dec[F(2)].certify(Q[F(4)])[0])
     if verbose:
         print('elapsed %.0fs' % (time.time() - t0))
     return ok[0]
