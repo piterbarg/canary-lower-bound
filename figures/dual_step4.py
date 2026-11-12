@@ -1,5 +1,5 @@
-"""Figure 11 of "Robust Lower Bound for a Canary Call": Step 4 of the proof
-of Proposition 6.2 (Appendix C.1) -- replacing a maximizer rho_0 by the node
+"""Figure 13 of "Robust Lower Bound for a Canary Call": Step 4 of the proof
+of Proposition 6.2 (Appendix C.2) -- replacing a maximizer rho_0 by the node
 interpolant of rho_1 = max(rho_0, e_2) with controlled half-line slopes.
   fig_step4_01.png
 Every plotted number is an exact rational; matplotlib only renders.

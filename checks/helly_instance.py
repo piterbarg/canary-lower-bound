@@ -1,6 +1,7 @@
 """Three Canaries that are pairwise universal but not jointly universal: the
-instance printed after the Helly reduction theorem of "Robust Lower Bound for
-a Canary Call" (appendix "Three Canaries, Pairwise Universal but Not Jointly").
+instance of Appendix E.1 of "Robust Lower Bound for a Canary Call" ("Three
+Canaries, Pairwise Universal but Not Jointly"; it illustrates the Helly
+reduction, Theorem 8.2).
 The paper prints the data and the result; this script is the derivation.
 
 q1 = (1/3, 2/3) on {0, 1},  q2 = (1/12, 5/12, 1/4, 1/4) on {-7/2, -13/4, 11/4, 13/2},

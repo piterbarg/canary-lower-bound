@@ -1,4 +1,4 @@
-"""The figure for Theorem thm:dens of "Robust Lower Bound for a Canary Call"
+"""Figure 12 of "Robust Lower Bound for a Canary Call" (Theorem 13.2)
 (the counterexample for densities): the smoothed marginals
   q1^{eps,delta} = (1-delta) q1 * law(eps U) + delta m,
   q2^{eps,delta} = (1-delta) q2 * law(eps (U+U')) + delta m,

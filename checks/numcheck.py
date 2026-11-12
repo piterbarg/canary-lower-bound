@@ -9,16 +9,16 @@ papers state them: at a window boundary, "universal at the boundary and not
 universal just beyond it".
 
 Blocks:
-  X  the counterexample of Proposition 12.1 (checks/exhibit_certificate.py)
+  X  the counterexample of Proposition 13.1 (checks/exhibit_certificate.py)
      and the decider on the dilation family (checks/exhibit_rows.py)
   H  the three Canaries that are pairwise universal but not jointly, the
-     instance after the Helly reduction theorem (checks/helly_instance.py)
+     instance of Appendix E.1 (checks/helly_instance.py)
   R  every threshold constant (canary.threshold.selftest)
-  W  the dilation windows of Theorem 11.1 as if-and-only-if statements
-  C  the binomial-flow thresholds of Theorem 11.2 and the (3,3), (4,4) cells
-  N  Proposition 10.1: the sufficient condition is not necessary
+  W  the dilation windows of Theorem 12.1 as if-and-only-if statements
+  C  the binomial-flow thresholds of Theorem 12.2 and the (3,3), (4,4) cells
+  N  Proposition 11.1: the sufficient condition is not necessary
   T  a pair of marginals with two admissible slope ratios below the
-     threshold, each with its own universal coupling (the remark after
+     threshold, each with its own universal coupling (the paragraph after
      that proposition)
 Run time: one to two minutes (exact LPs).
 """
@@ -58,7 +58,7 @@ def run(verbose=True):
     # ---- R: thresholds via the marginals-only calculator -----------------
     check('R threshold constants', T.selftest(verbose=False))
 
-    # ---- W: the dilation windows as iffs (Theorem 11.1) -----------------
+    # ---- W: the dilation windows as iffs (Theorem 12.1) -----------------
     G3 = T.binom_centred(2); G4 = T.binom_centred(3)
     eps = F(1, 50)
     for r in (F(1), F(9, 8), F(5, 4), F(7, 5)):          # three atoms: r in [1, 3/2)
@@ -87,7 +87,7 @@ def run(verbose=True):
     U3 = [(-1, F(1, 3)), (0, F(1, 3)), (1, F(1, 3))]
     check('W uniform3 x dilation 3: universal at r=1 (r*=1)', verdict(U3, T.dilate(U3, 3), 1) == UNIVERSAL)
 
-    # ---- C: the binomial flow (Theorem 11.2) and the diagonal cells ------
+    # ---- C: the binomial flow (Theorem 12.2) and the diagonal cells ------
     col = {2: F(13, 12), 3: F(17, 16), 4: F(21, 20), 5: F(25, 24)}
     for n, rs in col.items():
         q1, q2 = T.binom_flow(n, 2)
@@ -103,7 +103,7 @@ def run(verbose=True):
     check('C (4,4): universal at r=37/32', verdict(q1, q2, F(37, 32)) == UNIVERSAL)
     check('C (4,4): not universal at r=1', verdict(q1, q2, 1) == NOT_UNIVERSAL_PAIR)
 
-    # ---- N: the sufficient condition is not necessary (Proposition 10.1) -
+    # ---- N: the sufficient condition is not necessary (Proposition 11.1) -
     qa1, qa2 = T.CONVERSE_A
     check('N (a): universal at r=1', verdict(qa1, qa2, 1) == UNIVERSAL)
     for r in (F(11, 10), F(5, 4), F(3, 2), F(7, 4), F(9, 5)):

@@ -1,4 +1,4 @@
-"""The hand-checkable certificate for the counterexample of Proposition 12.1
+"""The hand-checkable certificate for the counterexample of Proposition 13.1
 ("Robust Lower Bound for a Canary Call", SSRN version of November 2026):
 two Canaries without a common minimal measure.
 

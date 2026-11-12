@@ -1,7 +1,7 @@
 """Does a pair of marginals q1 <=cx q2 admit a universal minimal measure at
 slope ratio r?  (Definition 8.1 of "Robust Lower Bound for a Canary Call",
 SSRN version of November 2026; the algorithm is the one summarised in its
-Section 14, "Universality".)
+Section 15, "Universality".)
 
 A coupling Q is universal iff V(Q; k) = L(k) for every Canary k = (k1, k2),
 where V(Q; k) is the value of the Canary under Q and L(k) its sharp lower

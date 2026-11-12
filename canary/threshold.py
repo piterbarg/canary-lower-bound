@@ -1,11 +1,11 @@
-"""The greedy fibers and the marginals-only threshold r* of Theorem 9.4 of
+"""The greedy fibers and the marginals-only threshold r* of Theorem 10.5 of
 "Robust Lower Bound for a Canary Call" (SSRN version of November 2026), in
 exact rationals, plus the explicit families of marginals used in the paper
 and its companion.
 
 W_j = the shadow of p_j delta_{x_j} in the remainder R_{j-1} = q2 - S_{j-1},
     which is the quantile window of R_{j-1} of mass p_j and barycentre x_j
-    (Lemma 9.1(a)); it is found by sliding a window of mass p_j along the
+    (Lemma 10.1(a)); it is found by sliding a window of mass p_j along the
     quantile axis of the remainder (the barycentre is continuous and
     non-decreasing in the position) and solving exactly.
 C_j(k) = int (y-k)^+ W_j(dy) / p_j;
@@ -17,8 +17,8 @@ selftest() recomputes the threshold constants printed in the two papers:
   three-atom symmetric law x dilation by c:  r* = (c+3)/4
   four-atom symmetric law x dilation by c:   r* = (c+2)/3
   uniform on {-1,0,1} x dilation by c:        r* = max(1, (c-1)/2)
-  Proposition 10.1 (a): 137/72;  (b): 49/36
-  the exceptional convolution instance of Section 10: 16/15
+  Proposition 11.1 (a): 137/72;  (b): 49/36
+  the exceptional convolution instance of Section 11: 16/15
   binomial flow, two steps, p = 1/2, n = 2..8:
       13/12, 17/16, 21/20, 25/24, 29/28, 31/30, 1153/1120
   binomial flow (3,3): 5/4;  (4,4): 37/32
@@ -93,7 +93,7 @@ def window(R, mass, mean):
 
 
 def greedy_fibers(q1, q2):
-    """the greedy fibers W_1, ..., W_n (Section 9.1)."""
+    """the greedy fibers W_1, ..., W_n (Section 10.1)."""
     R = list(q2); W = []
     for x, p in q1:
         w = window(R, p, x)
@@ -107,7 +107,7 @@ def greedy_fibers(q1, q2):
 
 
 def rstar(q1, q2):
-    """the threshold r*(q1, q2) of Theorem 9.4."""
+    """the threshold r*(q1, q2) of Theorem 10.5."""
     q1 = measure(q1); q2 = measure(q2)
     n = len(q1)
     if n < 2:
@@ -154,7 +154,7 @@ def convolve(q1, kern):
 
 
 # --------------------------------------------------------------- instances
-# Proposition 10.1 (a) and (b), and the exceptional convolution instance
+# Proposition 11.1 (a) and (b), and the exceptional convolution instance
 CONVERSE_A = ([(-3, F(1, 2)), (2, F(3, 7)), (3, F(1, 14))],
               [(-3, F(1, 2)), (F(-3, 2), F(3, 56)), (1, F(8, 35)),
                (F(3, 2), F(3, 70)), (F(9, 2), F(9, 56)), (F(19, 2), F(1, 70))])
@@ -182,8 +182,8 @@ def selftest(verbose=True):
     U3 = [(-1, F(1, 3)), (0, F(1, 3)), (1, F(1, 3))]
     for c in (F(2), F(3), F(4), F(5)):
         check('uniform3 r*(c=%s) = max(1,(c-1)/2)' % c, rstar(U3, dilate(U3, c)), max(F(1), (c - 1) / 2))
-    check('Proposition 10.1(a) r* = 137/72', rstar(*CONVERSE_A), F(137, 72))
-    check('Proposition 10.1(b) r* = 49/36', rstar(*CONVERSE_B), F(49, 36))
+    check('Proposition 11.1(a) r* = 137/72', rstar(*CONVERSE_A), F(137, 72))
+    check('Proposition 11.1(b) r* = 49/36', rstar(*CONVERSE_B), F(49, 36))
     check('exceptional convolution r* = 16/15',
           rstar(EXCEPTIONAL_Q1, convolve(EXCEPTIONAL_Q1, EXCEPTIONAL_KERNEL)), F(16, 15))
     for n, exp in zip(range(2, 9), FLOW_COLUMN):

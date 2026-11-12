@@ -21,8 +21,9 @@ def main(argv):
         print('NUMCHECK ALL PASS' if ok else 'NUMCHECK: SOME FAIL')
     if do_figs:
         sys.path.insert(0, os.path.join(HERE, 'figures'))
-        import shadow_and_chord, windows_and_column, dens_smoothed, dual_step4
+        import shadow_and_chord, prefix_and_switching, windows_and_column, dens_smoothed, dual_step4
         shadow_and_chord.main()
+        prefix_and_switching.main()
         windows_and_column.main()
         dens_smoothed.main()
         dual_step4.main()

@@ -1,10 +1,10 @@
-"""Figures 8 and 9 of "Robust Lower Bound for a Canary Call":
+"""Figures 10 and 11 of "Robust Lower Bound for a Canary Call":
   fig_windows_01.png -- universality regions of the three- and four-atom
       dilation families in the (c, r) plane: boundaries c = 4r-3 (three
       atoms, r in [1,3/2)) and c = 3r-2 (four atoms, all r >= 1), c in (1,3)
-      (Theorem 11.1).
+      (Theorem 12.1).
   fig_column_01.png  -- the binomial-flow thresholds r*(n), n = 2..8, two
-      steps, p = 1/2, with the lower bound 1 + 1/(4(n+1)) (Theorem 11.2).
+      steps, p = 1/2, with the lower bound 1 + 1/(4(n+1)) (Theorem 12.2).
 Every number is a theorem constant; nothing is fitted.
 Output: figures/output/
 """
