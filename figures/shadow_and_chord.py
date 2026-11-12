@@ -74,7 +74,7 @@ def main():
     ax1.legend(frameon=False, loc='upper right')
     ax1.grid(axis='y', color='#e6e5e1', lw=0.6)
     ax2.plot(ks, gg, color=INK, lw=2, label=r'$g=C_{q_2}-C_{\nu}$')
-    ax2.plot(hx, hy, color=GRAY, lw=2, ls='--', label=r'$\hat g=\lfloor g\rfloor$')
+    ax2.plot(hx, hy, color=GRAY, lw=2, ls='--', label=r'$\lfloor g\rfloor$')
     for x in (-2.0, 0.0, 2.0):
         ax2.plot([x], [float(call(q2, F(x)) - call(nu, F(x)))], 'o', color=GRAY,
                  ms=7, mfc='white', mew=2)

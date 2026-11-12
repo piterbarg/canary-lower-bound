@@ -11,6 +11,8 @@ universal just beyond it".
 Blocks:
   X  the counterexample of Proposition 12.1 (checks/exhibit_certificate.py)
      and the decider on the dilation family (checks/exhibit_rows.py)
+  H  the three Canaries that are pairwise universal but not jointly, the
+     instance after the Helly reduction theorem (checks/helly_instance.py)
   R  every threshold constant (canary.threshold.selftest)
   W  the dilation windows of Theorem 11.1 as if-and-only-if statements
   C  the binomial-flow thresholds of Theorem 11.2 and the (3,3), (4,4) cells
@@ -27,6 +29,7 @@ from canary.decider import UniversalityDecider, UNIVERSAL, NOT_UNIVERSAL_PAIR  #
 from canary import threshold as T  # noqa: E402
 import exhibit_certificate  # noqa: E402
 import exhibit_rows  # noqa: E402
+import helly_instance  # noqa: E402
 
 
 def run(verbose=True):
@@ -44,6 +47,10 @@ def run(verbose=True):
     # ---- X: the counterexample ------------------------------------------
     check('X exhibit hand certificate', exhibit_certificate.run(verbose=False))
     check('X decider on the dilation family (five quoted points)', exhibit_rows.run(verbose=False))
+
+    # ---- H: the Helly instance ------------------------------------------
+    check('H three Canaries, pairwise universal but not jointly (gap 1/108)',
+          helly_instance.run(verbose=False))
 
     # ---- R: thresholds via the marginals-only calculator -----------------
     check('R threshold constants', T.selftest(verbose=False))
